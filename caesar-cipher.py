@@ -7,6 +7,11 @@ def encrypt(message, key):
     for letter in message:
         letter_index=alphabet.index(letter)
         letter_index+=key
+        
+        if letter_index > 25:
+            letter_index=0
+            letter_index+=key
+
         letter=alphabet[letter_index]
         code+=letter
         
